@@ -11,10 +11,6 @@ COPY installSQLtools.sh installSQLtools.sh
 RUN bash ./installSQLtools.sh \
      && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
 
-# Create self-signed certificate for HTTPS
-RUN dotnet dev-certs https -ep /home/.aspnet/https/aspnetapp.pfx -p SecurePwdGoesHere
-RUN dotnet dev-certs https --trust
-
 # Install dotnet tools
 RUN dotnet tool install -g dotnet-ef
 RUN dotnet tool install -g Microsoft.Web.LibraryManager.Cli
