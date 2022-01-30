@@ -1,5 +1,8 @@
 {
-	"build": {
-		"dockerfile": "Dockerfile"
-	}
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "vscode": "true"
+        }
+    }
 }
