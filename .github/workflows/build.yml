@@ -29,7 +29,7 @@ jobs:
           export BUILDKIT_PROGRESS=plain
 
           # Do the build - update
-          npm install -g vscode/dev-container-cli@0.217.1
+          npm install -g "@vscode/dev-container-cli@0.217.1"
           devcontainer build --no-cache --image-name "${IMAGE_REPOSITORY}" "${FOLDER_WITH_DOT_DEVCONTAINER}"
 
           # Push image to GitHub Container Registry
